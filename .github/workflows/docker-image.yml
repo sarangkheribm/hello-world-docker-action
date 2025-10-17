@@ -13,10 +13,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-actions:new
-  
-  docker-run:
-    runs-on: ubuntu-latest
-    steps:
+    
     - name: Run the Docker Image
       run:  sudo docker run my-actions:new
       
